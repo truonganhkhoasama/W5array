@@ -6,6 +6,7 @@ struct phanso {
 	int mau;
 };
 
+//Ham rut gon phan so
 void Rutgon(int& t, int& m)
 {
 	int ucln = 0;
@@ -35,7 +36,8 @@ void Rutgon(int& t, int& m)
 	}
 }
 
-void Plus(phanso A, phanso& B)                    //Cong phan so
+//Ham cong phan so
+void Plus(phanso A, phanso& B)                    
 {
 	int t = A.tu * B.mau + B.tu * A.mau;
 	int m = A.mau * B.mau;
@@ -43,6 +45,7 @@ void Plus(phanso A, phanso& B)                    //Cong phan so
 	B = { t,m };
 }
 
+//Ham tinh tong day phan so
 void Sum(phanso A[], phanso& Tong, int size)
 {
 	Tong = { 0,1 };
@@ -52,6 +55,7 @@ void Sum(phanso A[], phanso& Tong, int size)
 	}
 }
 
+//Ham hoan doi 2 phan so
 void Swap(phanso& a, phanso& b)
 {
 	phanso temp = a;
@@ -59,6 +63,7 @@ void Swap(phanso& a, phanso& b)
 	b = temp;
 }
 
+//Ham in phan so
 void Print(phanso arr[], int size)
 {
 	for (int i = 0;i < size;i++)
@@ -68,6 +73,7 @@ void Print(phanso arr[], int size)
 	cout << "\n";
 }
 
+//Ham sap xep day phan so
 void Rearrange(phanso arr[], int size)
 {
 	for (int i = 0;i < size;i++)
@@ -98,8 +104,7 @@ int main()
 	}
 	else cout << 0;
 
-	cout << "\n\nDay phan so sau khi sap xep la: ";
-	Rearrange(A, size);
+	cout << "\n\nDay phan so sau khi sap xep: "; Rearrange(A, size);
 
 	return 0;
 }
